@@ -6,7 +6,7 @@ const { DatabaseSync } = require('node:sqlite');
 const PORT = Number(process.env.PORT || 3000);
 const ROOT = __dirname;
 const PUBLIC = path.join(ROOT, 'public');
-const DB_PATH = path.join(ROOT, 'data', 'ldc.db');
+const DB_PATH = process.env.DB_PATH || path.join(ROOT, 'data', 'ldc.db');
 const db = new DatabaseSync(DB_PATH);
 
 db.exec('PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000;');
