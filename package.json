@@ -1,0 +1,8 @@
+{
+  "name": "exam-bandhu-ldc-rank-predictor",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "engines": { "node": ">=22" },
+  "scripts": { "start": "node server.js" }
+}
